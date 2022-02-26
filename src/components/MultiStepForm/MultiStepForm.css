@@ -1,0 +1,45 @@
+.multi_step_container{
+  /* border: .5px solid red; */
+  /* margin-top: 500px; */
+  /* padding-bottom: 70px; */
+  /* padding-top: 40px; */
+  /* background: red; */
+  height: 700px;
+}
+
+.title_bar_signup{
+  
+  color: #204C8D;
+  font-size: 30px;
+  text-align: center;
+}
+
+.title_bar_signup h3{
+  font-size: 50px;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_button{
+  padding: 10px 40px;
+  background: #204C8D;
+  margin: 10px;
+  color: white;
+
+  cursor: pointer;
+}
+
+.footer_button:hover{
+  background: #466da7;
+}
+
+.disabled_button{
+  background: #9a9ea2;
+  padding: 10px 40px;
+  margin: 10px;
+  color: white;
+
+}

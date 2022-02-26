@@ -1,0 +1,357 @@
+.subscriptions_container {
+  width: 100%;
+  height: 100%;
+  background: rgb(247, 246, 246);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
+.subscriptions_title_head {
+  width: 94%;
+  height: 7%;
+  /* border: 0.5px solid purple; */
+  display: flex;
+  align-items: center;
+}
+
+.subscriptions_title_head p {
+  margin-left: 2px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #204c8d;
+}
+
+.subscriptions_content {
+  width: 100%;
+  /* border: 0.5px solid purple; */
+  width: 97%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div1 {
+  width: 70%;
+  height: 100%;
+  /* border: 0.5px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div1_top {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid purple; */
+  width: 100%;
+  height: 70%;
+}
+
+.subscription_card_img_div {
+  width: 42%;
+  height: 65%;
+  /* border: 0.5px solid red; */
+  margin-top: 30px;
+  margin-left: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription_card_img_div img {
+  /* border: 0.5px solid red; */
+  height: 100%;
+  width: 100%;
+}
+.sub_date_container {
+  width: 50%;
+  height: 89%;
+  /* border: 1px solid purple; */
+  margin-top: 17px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* border-radius: 10px; */
+}
+
+.subscription_start_date,
+.subscription_end_date {
+  /* border: 0.5px solid red; */
+  width: 49%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background: #204C8D; */
+  /* border-radius: 10px; */
+}
+
+.start_date_inner_container {
+  width: 95%;
+  height: 72%;
+  /* border: 0.5px solid orangered; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  background: #204c8d;
+}
+
+.subscription_icon {
+  width: 22%;
+  height: 20%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  /* border: 0.5px solid blue; */
+  border-radius: 10px;
+  background: white;
+}
+
+.subscription_date {
+  width: 60%;
+  height: 45%;
+  /* border: 0.5px solid blue; */
+  /* margin-bottom: 40px; */
+  border-radius: 10px;
+  background: white;
+}
+
+.date_title {
+  width: 45%;
+  height: 13%;
+  /* border: 0.5px solid blue; */
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  background: #204c8d;
+}
+
+.date_title p {
+  color: white;
+  font-weight: 500;
+}
+
+.div1_bottom {
+  /* border: 1px solid purple; */
+  height: 29%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment_method_container,
+.transaction_id_container {
+  /* border: 0.5px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 60%;
+}
+
+.payment_method_title,
+.payment_method {
+  /* border: 0.5px solid red; */
+  display: flex;
+  align-items: center;
+  padding: 8px 7px;
+}
+
+.transaction_id_title,
+.transaction_id {
+  /* border: 0.5px solid red; */
+  display: flex;
+  align-items: center;
+  padding: 8px 7px;
+}
+
+.payment_method,
+.transaction_id {
+  border-radius: 7px;
+  background: #204c8d;
+  color: white;
+}
+
+.transaction_id_title,
+.payment_method_title {
+  padding: 8px 7px;
+  color: #204c8d;
+  font-weight: 600;
+}
+
+/* .div2 {
+  width: 25%;
+  height: 100%;
+  border: 0.5px solid red;
+} */
+
+@media screen and (max-width: 1050px) {
+  .div1{
+    width: 100%;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .div1 {
+    width: 100%;
+    height: 350px;
+  }
+
+  .div1_top {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 330px;
+    flex-wrap: wrap;
+    margin-bottom: 330px;
+    justify-content: center;
+  }
+
+  .div1_bottom {
+    /* border: 1px solid purple; */
+  }
+
+  .subscription_card_img_div {
+    width: 500px;
+    height: 280px;
+    margin-left: 0px;
+  }
+
+  .subscription_card_img_div img {
+    /* border: 0.5px solid red; */
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .sub_date_container {
+    width: 380px;
+    height: 280px;
+    border: 1px solid purple;
+    margin-left: 10px;
+  }
+  /* .subscription_start_date,
+  .subscription_end_date {
+    width: 70%;
+    height: 100%;
+    border: 1px dashed purple;
+  } */
+
+  .date_title {
+    height: 15%;
+    
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .div1 {
+    width: 100%;
+    height: 350px;
+  }
+
+  .div1_top {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 330px;
+    flex-wrap: wrap;
+    margin-bottom: 330px;
+    justify-content: center;
+  }
+
+  .div1_bottom {
+    /* border: 1px solid purple; */
+  }
+
+  .subscription_card_img_div {
+    width: 470px;
+    height: 280px;
+    margin-left: 0px;
+  }
+
+  .subscription_card_img_div img {
+    /* border: 0.5px solid red; */
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .sub_date_container {
+    width: 380px;
+    height: 280px;
+    /* border: 1px solid purple; */
+    margin-left: 10px;
+  }
+  /* .subscription_start_date,
+  .subscription_end_date {
+    width: 70%;
+    height: 100%;
+    border: 1px dashed purple;
+  } */
+
+  .date_title {
+    height: 15%;
+    
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .div1 {
+    width: 100%;
+    height: 350px;
+  }
+
+  .div1_top {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+    justify-content: center;
+  }
+
+  .div1_bottom {
+    /* border: 1px solid purple; */
+  }
+
+  .subscription_card_img_div {
+    width: 390px;
+    height: 250px;
+    margin-left: 0px;
+  }
+
+  .subscription_card_img_div img {
+    /* border: 0.5px solid red; */
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .sub_date_container {
+    width: 340px;
+    height: 240px;
+    /* border: 1px solid purple; */
+    margin-left: 10px;
+  }
+  /* .subscription_start_date,
+  .subscription_end_date {
+    width: 70%;
+    height: 100%;
+    border: 1px dashed purple;
+  } */
+
+  .date_title {
+    height: 15%;
+    
+  }
+}

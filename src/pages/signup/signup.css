@@ -1,0 +1,235 @@
+.signup_beginning_div{
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+  width: 80%;
+  margin: 10px auto;
+  /* border: .5px solid red; */
+
+}
+
+
+.signup_left_side{
+  width: 50%;
+  /* background: #486ca2; */
+  /* border: .5px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+.signup_left_side img{
+  /* border: .5px solid red; */
+  margin: 2px auto;
+}
+
+.signup_container{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* background: pink; */
+  width: 55%;
+  /* border: .5px solid red; */
+}
+
+.form_div_signup{
+  width: 100%;
+  height: 100%;
+  /* border: .5px solid blue; */
+  display: block;
+}
+
+.signup_wrapper{
+  /* border: .5px solid red; */
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.names_container{
+  display: flex;
+  justify-content: space-between;
+  /* border: .5px solid red; */
+  width: 80%;
+}
+
+.names_container .signup_input_div_sub{
+  display: flex;
+  /* justify-content: space-around; */
+  /* border: .5px solid red; */
+  width: 48%;
+  /* margin-bottom: 20px; */
+}
+
+.signup_input_div_sub{
+  flex-direction: column;
+}
+
+.signup_input_div {
+  width: 80%;
+  /* border: .5px solid red; */
+  margin-top: 15px;
+  border-bottom: #204C8D;
+
+}
+
+.sigup_input{
+  width: 100%;
+  padding: 15px;
+  background: whitesmoke;
+  border: none;
+
+  
+}
+
+.sign_up_forgot_password{
+  /* border: .5px solid red; */
+  margin-top: 7px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sign_up_forgot_password a{
+  color:rgb(60, 60, 60);
+  font-size: 13px;
+}
+
+.signup_button_div{
+  width: 80%;
+  height: 40px;
+  /* border: .5px solid red; */
+  margin-top: 5px;
+}
+
+.signup_button{
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* border-radius: 7px; */
+  font-size: 15px;
+  background: #204C8D;
+  color: white;
+  cursor: pointer;
+  /* height: 100%; */
+}
+
+.signup_button:hover{
+  background: #486ca2;
+  
+}
+
+.span_container{
+  margin-top: 18px;
+
+}
+
+.login__account{
+  font-size: 15px;
+}
+
+.login__signin{
+  color: #204C8D;
+  margin-left: 10px;
+}
+
+.error_message_div{
+  /* border: 1px solid red; */
+}
+
+.error_message{
+  /* border: 1px solid red; */
+  font-size: 13px;
+  display: block;
+  /* text-align: center; */
+  padding-left: 12px;
+  margin-top: 5px;
+  color: red;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .signup_container{
+    width: 100%;
+  }
+  
+  
+  .form_div_signup{
+    width: 100%;
+    height: 100%;
+    /* border: .5px solid blue; */
+    display: block;
+  }
+  
+  .signup_left_side{
+    display: none;
+  }
+
+  .signup_input_div, .names_container {
+    width: 75%;
+    /* border: .5px solid red; */
+  }
+  .signup_button_div{
+    width: 75%;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .signup_container{
+    width: 100%;
+  }
+  
+  
+  .form_div_signup{
+    width: 100%;
+    height: 100%;
+    /* border: .5px solid blue; */
+    display: block;
+  }
+  
+  .signup_left_side{
+    display: none;
+  }
+
+  .signup_input_div, .names_container {
+    width: 90%;
+    /* border: .5px solid red; */
+  }
+  .signup_button_div{
+    width: 90%;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .signup_container{
+    width: 100%;
+  }
+  
+  .form_div_signup{
+    width: 100%;
+    height: 100%;
+    /* border: .5px solid blue; */
+    display: block;
+  }
+  
+  .signup_left_side{
+    display: none;
+  }
+
+  .signup_input_div, .names_container {
+    width: 90%;
+    /* border: .5px solid red; */
+  }
+  .signup_button_div{
+    width: 90%;
+    margin-top: 40px;
+  }
+}
