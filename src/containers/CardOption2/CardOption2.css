@@ -293,7 +293,7 @@
 
 @media screen and (max-width: 950px) {
   .card_option_container{
-    height: 1750px;
+    height: 800px;
     /* border: 1px solid red; */
     /* margin-top: 500px; */
   }
@@ -323,7 +323,7 @@
 
 @media screen and (max-width: 650px) {
   .card_option_container{
-    height: 1750px;
+    height: 800px;
     /* border: 1px solid red; */
     /* margin-top: 500px; */
   }
@@ -353,7 +353,7 @@
 
 @media screen and (max-width: 490px) {
   .card_option_container{
-    height: 1750px;
+    height: 800px;
     /* background: rgb(168, 168, 213); */
     /* border: 1px solid red; */
     /* margin-top: 500px; */

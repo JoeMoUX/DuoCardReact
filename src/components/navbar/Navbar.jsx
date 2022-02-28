@@ -96,28 +96,38 @@ const Navbar = () => {
                 <p>Home</p>
               </Link>
 
-              <p>
+              {/* <p>
                 <a href="#wduo_card">What is Duo Card?</a>
-              </p>
+              </p> */}
 
               <Link to="/login">
                 <p>Sign In</p>
               </Link>
 
+              <Link to="/dashboard/profile">
+                <p>Dashboard</p>
+              </Link>
+
               <p>
-                <a href="#features">Features</a>
+                <a
+                  onClick={() => {
+                    window.location.replace("/#features");
+                  }}
+                >
+                  Features
+                </a>
               </p>
 
               {/* <p>
                 <a href="#blog">Library</a>
               </p> */}
             </div>
-            <div className="duo_card__navbar-menu_container-links-sign">
+            {/* <div className="duo_card__navbar-menu_container-links-sign">
               <Link to="/login">
                 <p>Sign In</p>
               </Link>
-              {/* <button type="button">Sign up</button> */}
-            </div>
+              <button type="button">Sign up</button>
+            </div> */}
           </div>
         )}
       </div>
