@@ -211,6 +211,7 @@
 @media screen and (max-width: 490px) {
   .signup_container{
     width: 100%;
+    /* border: 1px solid red; */
   }
   
   .form_div_signup{

@@ -11,9 +11,6 @@ export const userSlice = createSlice({
       phoneNumber: "",
       password: "",
       confirmPassword: "",
-      classic: "",
-      wood: "",
-      metal: "",
     },
   },
   reducers: {

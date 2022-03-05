@@ -114,6 +114,7 @@
   font-weight: 700;
   /* border: .5px solid green; */
   cursor: pointer;
+  /* height: 100%; */
   transition: .3s ease-out;
 }
 

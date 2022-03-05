@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-// import Article from "../../components/article/Article";
-// import { blog01, blog02, blog03, blog04, blog05 } from "./imports";
 import "./CardOption2.css";
-import { SignUp } from "../../pages";
 import { useDispatch } from "react-redux";
-import { signup } from "../../components/featuresR/user";
+import { multiStepFormData } from "../../components/featuresR/multiStepFormData";
 
-
-const CardOption = ({ formDataSet, setFormDataSet }) => {
+const CardOption2 = ({ formDataSet, setFormDataSet }) => {
   const [radio1, setRadio1] = useState("");
   const [radio2, setRadio2] = useState("");
   const [radio3, setRadio3] = useState("");
@@ -18,32 +14,12 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
   const [formData, setFormData] = useState("");
   const dispatch = useDispatch();
 
-  // const triggerFxn = () => {
-  //   setToggle1(!toggle1);
-  //   console.log(radio1);
-  //   console.log(toggle1);
-
-  // if (!toggle1) {
-  // setRadio1("classic");
-  // console.log(radio1);
-  // console.log(toggle1);
-  // console.log(e.target.value);
-  // } else {
-  //   setRadio1("");
-  // console.log(radio1);
-  // console.log(toggle1);
-  // }
-  // console.log(radio2);
-  // };
   return (
     <div className="card_option_container">
       <div className="card-section__heading">
         <h3>Card Option</h3>
         <h4>(Click on a Card to Select)</h4>
       </div>
-
-      {/* <form> */}
-      {/* <h1>The Selected Card is --- {radio}</h1> */}
 
       <div className="duo_card__card-section " id="features">
         {/* --------------------------------------------- */}
@@ -62,15 +38,37 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
           className={radio1 ? "card-box-active" : "card-box"}
           onClick={() => {
             setToggle1(!toggle1);
-            // console.log(radio1);
+
             console.log(toggle1);
 
             if (!toggle1) {
               setRadio1("classic");
+              setFormDataSet({
+                ...formDataSet,
+                classic: "classic",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  classic: "classic",
+                })
+              );
               console.log(radio1);
               console.log(toggle1);
             } else {
               setRadio1("");
+              setFormDataSet({
+                ...formDataSet,
+                classic: "",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  classic: "",
+                })
+              );
               console.log(radio1);
               console.log(toggle1);
             }
@@ -83,39 +81,9 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
           }}
         >
           <div className="card-box__inner1">Plastic</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* <label htmlFor="classic" className="price-div">
-                Plastic
-              </label> */}
-            {/* </div> */}
-
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
-        {/* <div className="card-box__inner2"> */}
-        {/* <div className="price-div">50.00</div> */}
-        {/* <label htmlFor="classic" className="price-div">
-            Plastic
-          </label>
-        </div> */}
-        {/* </label> */}
 
-        {/* ---------------------------------------------- */}
-
-        {/* --------------------------------------------- */}
         <input
           type="radio"
           name="wood"
@@ -134,10 +102,33 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
             console.log(radio2);
             if (!toggle2) {
               setRadio2("wood");
+              setFormDataSet({
+                ...formDataSet,
+                wood: "wood",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  wood: "wood",
+                })
+              );
+
               console.log(radio2);
               console.log(toggle2);
             } else {
               setRadio2("");
+              setFormDataSet({
+                ...formDataSet,
+                wood: "",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  wood: "",
+                })
+              );
               console.log(radio2);
               console.log(toggle2);
             }
@@ -147,27 +138,10 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
             } else {
               setToggleForm(false);
             }
-            // console.log(radio2);
           }}
         >
           <div className="card-box__inner1">Wood</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* </div> */}
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
         {/* --------------------------------------------- */}
 
@@ -186,15 +160,38 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
           className={radio3 ? "card-box-active" : "card-box"}
           onClick={() => {
             setToggle3(!toggle3);
-            // console.log(radio3);
             console.log(toggle3);
 
             if (!toggle3) {
               setRadio3("metal");
+              setFormDataSet({
+                ...formDataSet,
+                metal: "metal",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  metal: "metal",
+                })
+              );
+
               console.log(radio3);
               console.log(toggle3);
             } else {
               setRadio3("");
+              setFormDataSet({
+                ...formDataSet,
+                metal: "",
+              });
+              console.log(formDataSet);
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  metal: "",
+                })
+              );
+
               console.log(radio3);
               console.log(toggle3);
             }
@@ -204,34 +201,15 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
             } else {
               setToggleForm(false);
             }
-            // console.log(radio3);
           }}
         >
           <div className="card-box__inner1">Metal</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* </div> */}
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
         {/* --------------------------------------------- */}
       </div>
-
-      {/* </form> */}
     </div>
   );
 };
 
-export default CardOption;
+export default CardOption2;

@@ -4,25 +4,32 @@ import { CardDeliveryOption } from "../../components";
 import { CustomizeCard } from "../../components";
 import { ContactInfo } from "../../components";
 import { Billing, SignUp } from "../../pages";
-// import { useDispatch } from "react-redux";
-// import { signup } from "../featuresR/user";
+import TestGround from "../TestGround";
+
 import "./MultiStepForm.css";
 
 const MultiStepForm = () => {
   const [page, setPage] = useState(0);
-  // const dispatch = useDispatch();
+
   const [formDataSet, setFormDataSet] = useState({
-    firstName: "",
-    lastName: "",
-    username: "",
-    email: "",
-    phoneNumber: "",
-    password: "",
-    confirmPassword: "",
     classic: "",
     wood: "",
     metal: "",
+    organizationName: "",
+    occupation: "",
+    organizationAddress: "",
+    website: "",
+    socials: "",
+    pickUp: "",
+    dropOff: "",
+    momoOption: "",
+    bankAccountOption: "",
+    dropOffAddress: "",
+    deliveryContactNumber: "",
+    bankAccountNumber: "",
+    momoNumber: "",
   });
+
   const FormSectionTitles = [
     "",
     "Contact Info",
@@ -96,6 +103,7 @@ const MultiStepForm = () => {
           </button>
         </div>
       </div>
+      {/* <TestGround /> */}
     </div>
   );
 };

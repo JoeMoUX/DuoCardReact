@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-// import Article from "../../components/article/Article";
-// import { blog01, blog02, blog03, blog04, blog05 } from "./imports";
+
 import "./CardOption.css";
 import { SignUp } from "../../pages";
-import { useDispatch } from "react-redux";
-import { signup } from "../../components/featuresR/user";
 
-
-const CardOption = ({ formDataSet, setFormDataSet }) => {
+const CardOption = () => {
   const [radio1, setRadio1] = useState("");
   const [radio2, setRadio2] = useState("");
   const [radio3, setRadio3] = useState("");
@@ -15,37 +11,15 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
   const [toggleForm, setToggleForm] = useState(false);
-  const [formData, setFormData] = useState("");
-  const dispatch = useDispatch();
 
-  // const triggerFxn = () => {
-  //   setToggle1(!toggle1);
-  //   console.log(radio1);
-  //   console.log(toggle1);
-
-  // if (!toggle1) {
-  // setRadio1("classic");
-  // console.log(radio1);
-  // console.log(toggle1);
-  // console.log(e.target.value);
-  // } else {
-  //   setRadio1("");
-  // console.log(radio1);
-  // console.log(toggle1);
-  // }
-  // console.log(radio2);
-  // };
   return (
-    <div className="card_option_container" id="cardOptions">
-      <div className="card-section__heading">
+    <div className="card_option_containerX" id="cardOptions">
+      <div className="card-section__headingX">
         <h3>Card Option</h3>
         <h4>(Click on a Card to Select)</h4>
       </div>
 
-      {/* <form> */}
-      {/* <h1>The Selected Card is --- {radio}</h1> */}
-
-      <div className="duo_card__card-section " id="features">
+      <div className="duo_card__card-sectionX " id="features">
         {/* --------------------------------------------- */}
         <input
           type="radio"
@@ -59,20 +33,14 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
         />
 
         <div
-          className={radio1 ? "card-box-active" : "card-box"}
+          className={radio1 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle1(!toggle1);
-            // console.log(radio1);
-            console.log(toggle1);
 
             if (!toggle1) {
               setRadio1("classic");
-              console.log(radio1);
-              console.log(toggle1);
             } else {
               setRadio1("");
-              console.log(radio1);
-              console.log(toggle1);
             }
 
             if (radio3 || radio2 || radio1) {
@@ -83,35 +51,8 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
           }}
         >
           <div className="card-box__inner1">Plastic</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* <label htmlFor="classic" className="price-div">
-                Plastic
-              </label> */}
-            {/* </div> */}
-
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
-        {/* <div className="card-box__inner2"> */}
-        {/* <div className="price-div">50.00</div> */}
-        {/* <label htmlFor="classic" className="price-div">
-            Plastic
-          </label>
-        </div> */}
-        {/* </label> */}
 
         {/* ---------------------------------------------- */}
 
@@ -128,18 +69,14 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
         />
 
         <div
-          className={radio2 ? "card-box-active" : "card-box"}
+          className={radio2 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle2(!toggle2);
-            console.log(radio2);
+
             if (!toggle2) {
               setRadio2("wood");
-              console.log(radio2);
-              console.log(toggle2);
             } else {
               setRadio2("");
-              console.log(radio2);
-              console.log(toggle2);
             }
 
             if (radio3 || radio2 || radio1) {
@@ -147,27 +84,10 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
             } else {
               setToggleForm(false);
             }
-            // console.log(radio2);
           }}
         >
           <div className="card-box__inner1">Wood</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* </div> */}
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
         {/* --------------------------------------------- */}
 
@@ -183,20 +103,14 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
           hidden
         />
         <div
-          className={radio3 ? "card-box-active" : "card-box"}
+          className={radio3 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle3(!toggle3);
-            // console.log(radio3);
-            console.log(toggle3);
 
             if (!toggle3) {
               setRadio3("metal");
-              console.log(radio3);
-              console.log(toggle3);
             } else {
               setRadio3("");
-              console.log(radio3);
-              console.log(toggle3);
             }
 
             if (radio3 || radio2 || radio1) {
@@ -204,36 +118,15 @@ const CardOption = ({ formDataSet, setFormDataSet }) => {
             } else {
               setToggleForm(false);
             }
-            // console.log(radio3);
           }}
         >
           <div className="card-box__inner1">Metal</div>
-          <div className="price_tag">
-            {/* <div className="card-box__inner2"> */}
-            {/* <div className="price-div">50.00</div> */}
-            {/* </div> */}
-            {/* <div className="card-box__inner3">
-              <div className="buy-button-card">
-                <button
-                  className="btn__add-to-cart"
-                  onClick={() => {
-                    setToggleForm(true);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div> */}
-          </div>
+          <div className="price_tag"></div>
         </div>
         {/* --------------------------------------------- */}
       </div>
 
-      {toggleForm ? (
-        <SignUp formDataSet={formDataSet} setFormDataSet={setFormDataSet} />
-      ) : null}
-
-      {/* </form> */}
+      {toggleForm ? <SignUp /> : null}
     </div>
   );
 };

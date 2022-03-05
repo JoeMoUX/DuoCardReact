@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./signup.css";
 import { appendErrors, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import { signup } from "../../components/featuresR/user";
 
@@ -20,11 +20,9 @@ import { signup } from "../../components/featuresR/user";
 // {
 //   resolver: yupResolver(schema),
 // }
-
-const SignUp = ({ formDataSet, setFormDataSet }) => {
+// { formDataSet, setFormDataSet }
+const SignUp = () => {
   let navigate = useNavigate();
-  // const [formDataSetValuesErrors, setFormDataSetValuesErrors] = useState({});
-  // const [dataBox, setDataBox] = useState("");
 
   const {
     register,
@@ -32,35 +30,17 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
     formState: { errors },
   } = useForm();
 
-  // const dataBox = [];
-  // const boxTaker = (item) => {
-  //   dataBox.push(item);
-  //   props.packedFormData(dataBox[0]);
-  //   // navigate("/dashboard");
-  // };
-  // const submitForm = (data, e) => {
-  //   e.preventDefault();
-  //   boxTaker(data);
-  //   console.log(dataBox[0]);
-  // console.log(data);
-  // console.log(e);}
-
   const dispatch = useDispatch();
+  const [userDetails, setUserDetails] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  // console.log(errors)
-
-  // const onError = () => {
-  //   console.log("Error somewhere");
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setFormDataSetValuesErrors(validate(formDataSetValuesErrors))
-  // };
-
-  // const validate = (formDataSetValues) => {
-
-  // };
   return (
     <div className="signup_beginning_div">
       <div className="signup_left_side">
@@ -98,21 +78,19 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                     type="text"
                     placeholder="First Name"
                     className="sigup_input"
-                    value={formDataSet.firstName}
+                    value={userDetails.firstName}
                     onChange={(e) => {
-                      setFormDataSet({
-                        ...formDataSet,
+                      setUserDetails({
+                        ...userDetails,
                         firstName: e.target.value,
                       });
                       dispatch(
                         signup({
-                          ...formDataSet,
+                          ...userDetails,
                           firstName: e.target.value,
                         })
                       );
-                      // console.log(e.target.value);
                     }}
-                    // name="firstName"
                   />
                 </div>
 
@@ -124,7 +102,6 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
               </div>
 
               <div className="signup_input_div_sub">
-                {/* <i className="bx bx-user login__icon"></i> */}
                 <div>
                   <input
                     {...register("lastName", {
@@ -140,21 +117,19 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                     })}
                     type="text"
                     placeholder="Last Name"
-                    // name="lastName"
                     className="sigup_input"
-                    value={formDataSet.lastName}
+                    value={userDetails.lastName}
                     onChange={(e) => {
-                      setFormDataSet({
-                        ...formDataSet,
+                      setUserDetails({
+                        ...userDetails,
                         lastName: e.target.value,
                       });
                       dispatch(
                         signup({
-                          ...formDataSet,
+                          ...userDetails,
                           lastName: e.target.value,
                         })
                       );
-                      // console.log(e.target.value);
                     }}
                   />
                 </div>
@@ -173,17 +148,16 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                 })}
                 type="text"
                 placeholder="Username"
-                // name="username"
                 className="sigup_input"
-                value={formDataSet.username}
+                value={userDetails.username}
                 onChange={(e) => {
-                  setFormDataSet({
-                    ...formDataSet,
+                  setUserDetails({
+                    ...userDetails,
                     username: e.target.value,
                   });
                   dispatch(
                     signup({
-                      ...formDataSet,
+                      ...userDetails,
                       username: e.target.value,
                     })
                   );
@@ -202,18 +176,17 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                   required: true,
                 })}
                 type="email"
-                // name="email"
                 placeholder="Email Address"
                 className="sigup_input"
-                value={formDataSet.email}
+                value={userDetails.email}
                 onChange={(e) => {
-                  setFormDataSet({
-                    ...formDataSet,
+                  setUserDetails({
+                    ...userDetails,
                     email: e.target.value,
                   });
                   dispatch(
                     signup({
-                      ...formDataSet,
+                      ...userDetails,
                       email: e.target.value,
                     })
                   );
@@ -234,17 +207,16 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                 })}
                 type="number"
                 placeholder="Phone Number"
-                // name="phoneNumber"
                 className="sigup_input"
-                value={formDataSet.phoneNumber}
+                value={userDetails.phoneNumber}
                 onChange={(e) => {
-                  setFormDataSet({
-                    ...formDataSet,
+                  setUserDetails({
+                    ...userDetails,
                     phoneNumber: e.target.value,
                   });
                   dispatch(
                     signup({
-                      ...formDataSet,
+                      ...userDetails,
                       phoneNumber: e.target.value,
                     })
                   );
@@ -266,17 +238,17 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                 })}
                 type="password"
                 placeholder="Password"
-                // name="password"
                 className="sigup_input"
-                value={formDataSet.password}
+                value={userDetails.password}
                 onChange={(e) => {
-                  setFormDataSet({
-                    ...formDataSet,
+                  setUserDetails({
+                    ...userDetails,
                     password: e.target.value,
                   });
+
                   dispatch(
                     signup({
-                      ...formDataSet,
+                      ...userDetails,
                       password: e.target.value,
                     })
                   );
@@ -298,17 +270,17 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
                 })}
                 type="password"
                 placeholder="Confirm Password"
-                // name="confirmPassword"
                 className="sigup_input"
-                value={formDataSet.confirmPassword}
+                value={userDetails.confirmPassword}
                 onChange={(e) => {
-                  setFormDataSet({
-                    ...formDataSet,
+                  setUserDetails({
+                    ...userDetails,
                     confirmPassword: e.target.value,
                   });
+
                   dispatch(
                     signup({
-                      ...formDataSet,
+                      ...userDetails,
                       confirmPassword: e.target.value,
                     })
                   );
@@ -316,7 +288,9 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
               />
               {errors.confirmPassword && (
                 <div className="error_message_div">
-                  <p className="error_message">{errors.confirmPassword.message}</p>
+                  <p className="error_message">
+                    {errors.confirmPassword.message}
+                  </p>
                 </div>
               )}
               {/* {errors.password && <p>errors.message.message</p>} */}
@@ -325,18 +299,8 @@ const SignUp = ({ formDataSet, setFormDataSet }) => {
               <a href="#">Forgot password?</a>
             </div>
 
-            {/* <a href="#" className="login__button">
-              Register
-            </a> */}
-            {/* {dataBox ? <p>{console.log(dataBox[0])}</p> : null} */}
             <div className="signup_button_div">
-              <button
-                type="submit"
-                // onClick={() => {
-                //   navigate("/billing");
-                // }}
-                className="signup_button"
-              >
+              <button type="submit" className="signup_button">
                 Pay Now
               </button>
             </div>
