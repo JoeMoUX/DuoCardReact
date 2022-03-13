@@ -10,8 +10,6 @@ const CardOption2 = ({ formDataSet, setFormDataSet }) => {
   const [toggle1, setToggle1] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
-  const [toggleForm, setToggleForm] = useState(false);
-  const [formData, setFormData] = useState("");
   const dispatch = useDispatch();
 
   return (
@@ -72,12 +70,6 @@ const CardOption2 = ({ formDataSet, setFormDataSet }) => {
               console.log(radio1);
               console.log(toggle1);
             }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
-            }
           }}
         >
           <div className="card-box__inner1">Plastic</div>
@@ -131,12 +123,6 @@ const CardOption2 = ({ formDataSet, setFormDataSet }) => {
               );
               console.log(radio2);
               console.log(toggle2);
-            }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
             }
           }}
         >
@@ -194,12 +180,6 @@ const CardOption2 = ({ formDataSet, setFormDataSet }) => {
 
               console.log(radio3);
               console.log(toggle3);
-            }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
             }
           }}
         >

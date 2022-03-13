@@ -4,13 +4,12 @@ import "./CardOption.css";
 import { SignUp } from "../../pages";
 
 const CardOption = () => {
-  const [radio1, setRadio1] = useState("");
-  const [radio2, setRadio2] = useState("");
-  const [radio3, setRadio3] = useState("");
+  const [checked1, setChecked1] = useState("");
+  const [checked2, setChecked2] = useState("");
+  const [checked3, setChecked3] = useState("");
   const [toggle1, setToggle1] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
-  const [toggleForm, setToggleForm] = useState(false);
 
   return (
     <div className="card_option_containerX" id="cardOptions">
@@ -22,31 +21,25 @@ const CardOption = () => {
       <div className="duo_card__card-sectionX " id="features">
         {/* --------------------------------------------- */}
         <input
-          type="radio"
+          type="checkbox"
           name="classic"
-          checked={radio1 === "classic"}
+          checked={checked1 === "classic"}
           value="classic"
           onChange={(e) => {
-            setRadio1(e.target.value);
+            setChecked1(e.target.value);
           }}
           hidden
         />
 
         <div
-          className={radio1 ? "card-box-activeX" : "card-boxX"}
+          className={checked1 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle1(!toggle1);
 
             if (!toggle1) {
-              setRadio1("classic");
+              setChecked1("classic");
             } else {
-              setRadio1("");
-            }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
+              setChecked1("");
             }
           }}
         >
@@ -58,31 +51,25 @@ const CardOption = () => {
 
         {/* --------------------------------------------- */}
         <input
-          type="radio"
+          type="checkbox"
           name="wood"
-          checked={radio2 === "wood"}
+          checked={checked2 === "wood"}
           value="wood"
           onChange={(e) => {
-            setRadio2(e.target.value);
+            setChecked2(e.target.value);
           }}
           hidden
         />
 
         <div
-          className={radio2 ? "card-box-activeX" : "card-boxX"}
+          className={checked2 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle2(!toggle2);
 
             if (!toggle2) {
-              setRadio2("wood");
+              setChecked2("wood");
             } else {
-              setRadio2("");
-            }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
+              setChecked2("");
             }
           }}
         >
@@ -93,30 +80,24 @@ const CardOption = () => {
 
         {/* --------------------------------------------- */}
         <input
-          type="radio"
+          type="checkbox"
           name="metal"
-          checked={radio3 === "metal"}
+          checked={checked3 === "metal"}
           value="metal"
           onChange={(e) => {
-            setRadio3(e.target.value);
+            setChecked3(e.target.value);
           }}
           hidden
         />
         <div
-          className={radio3 ? "card-box-activeX" : "card-boxX"}
+          className={checked3 ? "card-box-activeX" : "card-boxX"}
           onClick={() => {
             setToggle3(!toggle3);
 
             if (!toggle3) {
-              setRadio3("metal");
+              setChecked3("metal");
             } else {
-              setRadio3("");
-            }
-
-            if (radio3 || radio2 || radio1) {
-              setToggleForm(true);
-            } else {
-              setToggleForm(false);
+              setChecked3("");
             }
           }}
         >
@@ -126,7 +107,7 @@ const CardOption = () => {
         {/* --------------------------------------------- */}
       </div>
 
-      {toggleForm ? <SignUp /> : null}
+      {checked1 || checked2 || checked3 ? <SignUp /> : null}
     </div>
   );
 };
