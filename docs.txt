@@ -1,0 +1,4 @@
+"homepage": "https://JoeMoUX.github.io/DuoCardReact",
+"homepage": "https://JoeMoUX.github.io",
+
+"homepage": "https://duo-card-react.vercel.app/",
