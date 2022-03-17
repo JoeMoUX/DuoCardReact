@@ -88,12 +88,6 @@ const Navbar = () => {
               </p>
 
             </div>
-            {/* <div className="duo_card__navbar-menu_container-links-sign">
-              <Link to="/login">
-                <p>Sign In</p>
-              </Link>
-              <button type="button">Sign up</button>
-            </div> */}
           </div>
         )}
       </div>
