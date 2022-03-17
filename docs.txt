@@ -2,3 +2,6 @@
 "homepage": "https://JoeMoUX.github.io",
 
 "homepage": "https://duo-card-react.vercel.app/",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
