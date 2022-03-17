@@ -73,11 +73,15 @@ const Navbar = () => {
                 <p>Sign In</p>
               </Link>
 
-              <Link to="/dashboard/profile">
+              <Link to="/dashboard">
                 <p>Dashboard</p>
               </Link>
 
-              <p>
+              <Link to="/about">
+                <p>About Us</p>
+              </Link>
+
+              {/* <p>
                 <a
                   onClick={() => {
                     window.location.replace("/#features");
@@ -85,7 +89,7 @@ const Navbar = () => {
                 >
                   Features
                 </a>
-              </p>
+              </p> */}
 
             </div>
           </div>
