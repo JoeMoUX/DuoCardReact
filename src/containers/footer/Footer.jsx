@@ -1,23 +1,9 @@
 import React from 'react';
-// import duo_cardLogo from '../../assets/logo.svg';
-// import duo_logo from "../../assets/duo_svg.svg";
 import './footer.css';
 
 const Footer = () => (
   <div className="duo_card__footer section__padding">
-    {/* <div className="duo_card__footer-heading">
-      <h1 className="gradient__text">Do you want to step in to the future before others</h1>
-    </div> */}
-
-    {/* <div className="duo_card__footer-btn">
-      <p>Request Early Access</p>
-    </div> */}
-
     <div className="duo_card__footer-links">
-      {/* <div className="duo_card__footer-links_logo">
-        <img src={duo_logo} alt="duo_logo" />
-        <p>Accra, Ghana, <br /> All Rights Reserved</p>
-      </div> */}
       <div className="duo_card__footer-links_div">
         <h4>Links</h4>
         <p>Overons</p>

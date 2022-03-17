@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-// import logo from "../../assets/logo.svg";
 import duo_logo from "../../assets/duo_logo.svg";
-
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -21,33 +19,13 @@ const Navbar = () => {
             <p>Home</p>
           </Link>
 
-          <Link to="/dashboard/profile">
+          <Link to="/dashboard">
             <p>Dashboard</p>
           </Link>
 
-          {/* <p>
-            <a href="#wduo_card">What is Duo Card?</a>
-          </p> */}
-
-          <p>
-            <a
-              onClick={() => {
-                window.location.replace("/#possibility");
-              }}
-            >
-              Possibilities
-            </a>
-          </p>
-
-          <p>
-            <a
-              onClick={() => {
-                window.location.replace("/#features");
-              }}
-            >
-              Features
-            </a>
-          </p>
+          <Link to="/about">
+            <p>About Us</p>
+          </Link>
 
           <Link to="/blog">{/* <p>Our Blog</p> */}</Link>
         </div>
@@ -56,20 +34,16 @@ const Navbar = () => {
         <Link to="/login">
           <p>Sign in</p>
         </Link>
-        {/* onClick={() => {navigate("/choosecard")}} */}
-        {/* <Link to="/#cardOptions"> */}
+
         <button
           type="button"
-          // onClick={() => {
-          //   navigate("/signup");
-          // }}
+
           onClick={() => {
             window.location.replace("/#cardOptions");
           }}
         >
           BUY
         </button>
-        {/* </Link> */}
       </div>
 
       {/* toggle menu with icons */}
@@ -88,17 +62,12 @@ const Navbar = () => {
           />
         )}
 
-        {/* toggle option */}
         {toggleMenu && (
           <div className="duo_card__navbar-menu_container scale-up-center">
             <div className="duo_card__navbar-menu_container-links">
               <Link to="/">
                 <p>Home</p>
               </Link>
-
-              {/* <p>
-                <a href="#wduo_card">What is Duo Card?</a>
-              </p> */}
 
               <Link to="/login">
                 <p>Sign In</p>
@@ -118,9 +87,6 @@ const Navbar = () => {
                 </a>
               </p>
 
-              {/* <p>
-                <a href="#blog">Library</a>
-              </p> */}
             </div>
             {/* <div className="duo_card__navbar-menu_container-links-sign">
               <Link to="/login">

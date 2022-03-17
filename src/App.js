@@ -1,13 +1,6 @@
 import React, { useState } from "react";
-import {
-
-  Features,
-  Footer,
-  Header,
-  Possibility,
-  WhatIsDuoCard,
-} from "./containers";
-import { CTA, Navbar, MultiStepForm } from "./components";
+import { WhatIsDuoCard } from "./containers";
+import { Navbar, MultiStepForm } from "./components";
 
 import {
   Home,
@@ -16,9 +9,6 @@ import {
   ChooseCard,
   ConfirmationTransaction,
   Dashboard,
-  Subscriptions,
-  CardSettings,
-  Profile,
   ErrorPage,
   SignUp,
   Login,
@@ -27,22 +17,11 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  const [formData, setFormData] = useState("");
-
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              formDataToApp={(formDataInfo) => {
-                setFormData(formDataInfo);
-              }}
-            />
-          }
-        />
+        <Route path="/" element={<Home />} />
         <Route path="what_is_duo_card" element={<WhatIsDuoCard />} />
 
         <Route path="login" element={<Login />} />
@@ -55,21 +34,12 @@ const App = () => {
           element={<ConfirmationTransaction />}
         />
 
-        <Route
-          path="dashboard"
-          element={<Dashboard userInfoFromForm={formData} />}>
-          <Route path="subscriptions" element={<Subscriptions />} />
-          <Route path="cardsettings" element={<CardSettings />} />
-          <Route path="profile" element={<Profile />} />
-
-        </Route>
+        <Route path="dashboard" element={<Dashboard />} />
 
         <Route path="errorPage" element={<ErrorPage />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="multiStepForm" element={<MultiStepForm />} />
-
       </Routes>
-
       {/* <Footer /> */}
     </div>
   );
