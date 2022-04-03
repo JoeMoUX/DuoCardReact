@@ -6,8 +6,3 @@ The React part
 This reflects changes made in the repository on the live hosted page
 
     npm run deploy
-    
-This reflects changes made in the repository on the live hosted page.
-    
-    npm run deploy
-
