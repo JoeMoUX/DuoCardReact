@@ -1,5 +1,5 @@
-import React from 'react';
-import './footer.css';
+import React from "react";
+import "./footer.css";
 
 const Footer = () => (
   <div className="duo_card__footer section__padding">

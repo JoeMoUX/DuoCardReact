@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceImg from '../../assets/ServiceImg.svg'
+import ServiceImg from "../../assets/ServiceImg.svg";
 import "./about.css";
 
 const About = () => {
@@ -19,7 +19,7 @@ const About = () => {
           </div>
         </div>
         <div className="about_right_side">
-          <div className="about_first_section_img">
+          <div className="about_first_section_img_div">
             <img
               src="https://assets-global.website-files.com/60b64e5e7e0ea41f8673bebb/60ca2dd8d6d21b6d78abf316_Group%201315.svg"
               alt="img"
@@ -48,11 +48,8 @@ const About = () => {
           </div>
         </div>
         <div className="about_right_side_second_section">
-        <div className="about_second_section_img">
-            <img
-              src={ServiceImg}
-              alt="img"
-            />
+          <div className="about_second_section_img_div">
+            <img src={ServiceImg} alt="img" />
           </div>
         </div>
       </div>

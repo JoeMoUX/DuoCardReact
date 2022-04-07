@@ -21,7 +21,7 @@ const Home = (props) => {
       <Tabs />
       <CardOption />
       {/* <TestGround /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

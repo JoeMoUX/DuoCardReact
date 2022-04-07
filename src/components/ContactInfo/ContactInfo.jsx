@@ -17,7 +17,11 @@ function ContactInfo({ formDataSet, setFormDataSet }) {
   return (
     <div className="contact_info_container_div">
       <div className="contact_info_left_div">
-        <img src={contactImage} alt="contactImage" />
+        <img
+          className="contact_info_img"
+          src={contactImage}
+          alt="contactImage"
+        />
       </div>
       <div className="contact_info_right_div">
         <div className="contact_info_input_div">
@@ -154,31 +158,31 @@ function ContactInfo({ formDataSet, setFormDataSet }) {
         </div>
         <div className="contact_info_input_div">
           <input
-          {...register("socials", {
-            required: "Your socials have to be provided.",
-            // required: true,
-            minLength: {
-              value: 5,
-              message: "A minimum of 5 characters is permitted",
-            },
-            maxLength: {
-              value: 50,
-              message: "A maximum of 50 characters is permitted",
-            },
-          })}
-          value={formDataSet.socials}
-          onChange={(e) => {
-            setFormDataSet({
-              ...formDataSet,
-              socials: e.target.value,
-            });
-            dispatch(
-              multiStepFormData({
+            {...register("socials", {
+              required: "Your socials have to be provided.",
+              // required: true,
+              minLength: {
+                value: 5,
+                message: "A minimum of 5 characters is permitted",
+              },
+              maxLength: {
+                value: 50,
+                message: "A maximum of 50 characters is permitted",
+              },
+            })}
+            value={formDataSet.socials}
+            onChange={(e) => {
+              setFormDataSet({
                 ...formDataSet,
                 socials: e.target.value,
-              })
-            );
-          }}
+              });
+              dispatch(
+                multiStepFormData({
+                  ...formDataSet,
+                  socials: e.target.value,
+                })
+              );
+            }}
             type="text"
             // name="socials"
             placeholder="Socials (facebook, ig)..."

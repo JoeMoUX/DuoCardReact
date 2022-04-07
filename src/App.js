@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { WhatIsDuoCard } from "./containers";
+import { WhatIsDuoCard, Footer } from "./containers";
 import { Navbar, MultiStepForm } from "./components";
 
 import {
@@ -40,7 +40,8 @@ const App = () => {
         <Route path="signup" element={<SignUp />} />
         <Route path="multiStepForm" element={<MultiStepForm />} />
       </Routes>
-      {/* <Footer /> */}
+
+      <Footer />
     </div>
   );
 };

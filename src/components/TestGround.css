@@ -1,10 +1,10 @@
-.testground{
+.testground {
   height: 400px;
   width: 100%;
   background-color: whitesmoke;
   text-align: center;
 }
 
-div{
-  text-align: center;
+div {
+  /* text-align: center; */
 }
