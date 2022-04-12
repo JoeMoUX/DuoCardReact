@@ -84,6 +84,10 @@ const Navbar = () => {
                 <p>About Us</p>
               </Link>
 
+              <Link to="/compatibility">
+                <p>Device Compatibility</p>
+              </Link>
+
               {/* <p>
                 <a
                   onClick={() => {
