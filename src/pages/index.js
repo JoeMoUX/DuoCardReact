@@ -7,3 +7,4 @@ export { default as ErrorPage } from "./errorPage/ErrorPage";
 export { default as SignUp } from "./signup/SignUp";
 export { default as Home } from "./home/Home";
 export { default as Login } from "./login/login";
+export { default as Compatibility } from "./compatibility/Compatibility";

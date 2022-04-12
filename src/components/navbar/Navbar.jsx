@@ -27,6 +27,10 @@ const Navbar = () => {
             <p>About Us</p>
           </Link>
 
+          <Link to="/compatibility">
+            <p>Device Compatibility</p>
+          </Link>
+
           <Link to="/blog">{/* <p>Our Blog</p> */}</Link>
         </div>
       </div>
@@ -37,7 +41,6 @@ const Navbar = () => {
 
         <button
           type="button"
-
           onClick={() => {
             window.location.replace("/#cardOptions");
           }}
@@ -90,7 +93,6 @@ const Navbar = () => {
                   Features
                 </a>
               </p> */}
-
             </div>
           </div>
         )}

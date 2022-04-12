@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./billing.css";
 import mtnMomo from "../../assets/mtn_momo.svg";
 import visacard from "../../assets/visa_card.svg";
 import { useDispatch } from "react-redux";
 import { multiStepFormData } from "../../components/featuresR/multiStepFormData";
 import { appendErrors, useForm } from "react-hook-form";
-
 
 const Billing = ({ formDataSet, setFormDataSet }) => {
   const {
@@ -15,7 +14,7 @@ const Billing = ({ formDataSet, setFormDataSet }) => {
     formState: { errors },
   } = useForm();
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const dispatch = useDispatch();
   const [radio1, setRadio1] = useState("");
   const [radio2, setRadio2] = useState("");
@@ -154,7 +153,7 @@ const Billing = ({ formDataSet, setFormDataSet }) => {
                     ...formDataSet,
                     momoNumber: e.target.value,
                   });
-                  
+
                   dispatch(
                     multiStepFormData({
                       ...formDataSet,
@@ -188,12 +187,12 @@ const Billing = ({ formDataSet, setFormDataSet }) => {
                 onChange={(e) => {
                   setFormDataSet({
                     ...formDataSet,
-                    bankAccountNumber:  e.target.value,
+                    bankAccountNumber: e.target.value,
                   });
                   dispatch(
                     multiStepFormData({
                       ...formDataSet,
-                      bankAccountNumber:  e.target.value,
+                      bankAccountNumber: e.target.value,
                     })
                   );
                 }}

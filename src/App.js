@@ -12,6 +12,7 @@ import {
   ErrorPage,
   SignUp,
   Login,
+  Compatibility,
 } from "./pages";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="login" element={<Login />} />
 
         <Route path="about" element={<About />} />
+        <Route path="compatibility" element={<Compatibility />} />
         <Route path="billing" element={<Billing />} />
         <Route path="chooseCard" element={<ChooseCard />} />
         <Route
