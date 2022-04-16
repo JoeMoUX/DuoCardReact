@@ -3,7 +3,7 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <div className="duo_card__header section__padding" id="home">
+    <div className="duo_card__header" id="home">
       <div className="duo_card__header-content">
         <h1 className="blue__text">Duocard is the future of business cards.</h1>
 

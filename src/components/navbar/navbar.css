@@ -2,33 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem 2rem 6rem;
-  /* border: 2px dashed blue; */
+  padding: 0.3rem 6rem 0rem 6rem;
   height: 100px;
-  margin-bottom: 10px;
-  /* background: var(--color-bg); */
+  width: 100%;
+  /* background: #d6d5e0; */
+  position: fixed;
+  top: 0;
 }
 
 .duo_card__navbar-links {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-}
-
-.duo_card__navbar-links_logo {
-  margin-right: 2rem;
-}
-
-.duo_card__navbar-links_logo img {
-  width: 100px;
-  height: 110px;
-  /* border: 2px solid blue; */
-}
-
-.duo_card__navbar-links_container {
-  display: flex;
-  flex-direction: row;
 }
 
 .duo_card__navbar-sign {
@@ -37,33 +22,90 @@
   align-items: center;
 }
 
-.duo_card__navbar-links_container p,
-.duo_card__navbar-sign p,
+.lock_nav {
+  background: #204c8d;
+  transition: 0.3s;
+}
+
+.duo_card__navbar-links_logo {
+  margin-right: 2rem;
+  /* border: 0.5px solid red; */
+  height: 100%;
+}
+
+.duo_card__navbar-links_logo img {
+  width: 100px;
+  height: 100%;
+  /* border: 2px solid blue; */
+}
+
+.duo_card__navbar-links_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.duo_card__navbar-links_container .navbar_link_para,
+.duo_card__navbar-sign .navbar_sign_para,
 .duo_card__navbar-menu_container p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.duo_card__navbar-sign .navbar_sign_para {
+  color: #204c8d;
+}
+
+.duo_card__navbar-links_container .navbar_link_para {
+  color: #204c8d;
+}
+
+.nav_links_scroll_styles {
   color: #fff;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
   text-transform: capitalize;
-
   margin: 0 1rem;
   cursor: pointer;
 }
 
-.duo_card__navbar-sign p {
-  color: #204C8D;
+.sign_in_links_scroll_styles {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
 }
 
-.duo_card__navbar-links_container p {
-  color: #204C8D;
-}
-
-.duo_card__navbar-sign button,
-.duo_card__navbar-menu_container button {
+.duo_card__navbar-sign .button_scroll_style,
+.duo_card__navbar-menu_container .button_scroll_style {
   padding: 0.5rem 1rem;
   color: #fff;
-  background: #204C8D;
+  background: #204c8d;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.duo_card__navbar-sign .button_scroll_style_activated,
+.duo_card__navbar-menu_container .button_scroll_style_activated {
+  padding: 0.5rem 1rem;
+  color: #204c8d;
+  background: #fff;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;

@@ -6,9 +6,16 @@
 }
 
 body {
-  /* background: var(--color-bg); */
   background: #fff;
-  /* margin: 0 25%; */
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
 }
 
 a {
@@ -16,97 +23,8 @@ a {
   color: unset;
 }
 
-.gradient_bg {
-  /* ff 3.6+ */
-  background: -moz-linear-gradient(
-    41deg,
-    rgba(82, 183, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%,
-    rgba(63, 136, 167, 1) 100%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(
-    41deg,
-    rgba(82, 183, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%,
-    rgba(63, 136, 167, 1) 100%
-  );
-
-  /* opera 11.10+ */
-  background: -o-linear-gradient(
-    41deg,
-    rgba(82, 183, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%,
-    rgba(63, 136, 167, 1) 100%
-  );
-
-  /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52B7E2', endColorstr='#3F88A7', GradientType=1 );
-
-  /* ie 10+ */
-  background: -ms-linear-gradient(
-    41deg,
-    rgba(82, 183, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%,
-    rgba(63, 136, 167, 1) 100%
-  );
-
-  /* global 94%+ browsers support */
-  background: linear-gradient(
-    41deg,
-    rgba(82, 183, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%,
-    rgba(63, 136, 167, 1) 100%
-  );
-}
-
-/* .gradient__bg {
-  
-  background: -moz-radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-/* background: -webkit-radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
-  ); */
-
-/* opera 11.10+ */
-/* background: -o-radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
-  ); */
-
-/* ie 10+ */
-/* background: -ms-radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
-  ); */
-
-/* global 92%+ browsers support */
-/* background: radial-gradient(
-    circle at 3% 25%,
-    rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
-  );
-} */
-
 .blue__text {
   color: #204c8d;
-}
-
-.gradient__text {
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .section__padding {
@@ -120,10 +38,6 @@ a {
 .section__padding1 {
   padding: 0rem 3rem;
 }
-
-/* .section__margin1 {
-  margin: 2rem 3rem;
-} */
 
 .scale-up-center {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
@@ -155,24 +69,24 @@ a {
   }
 }
 
-/* for device with max-width of 700px {Tablet Devices and such}*/
-@media screen and (max-width: 700px) {
-  .section__padding {
-    padding: 4rem;
-  }
-
-  .section__margin {
-    margin: 4rem;
-  }
+/* MEDIA QUERIES */
+@media screen and (max-width: 1050px) {
 }
 
-/* for device with max-width of 550px {Phones and such}*/
-@media screen and (max-width: 550px) {
-  .section__padding {
-    padding: 4rem 2rem;
-  }
+@media screen and (max-width: 950px) {
+}
 
-  .section__margin {
-    margin: 4rem 2rem;
+@media screen and (max-width: 720px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 490px) {
+}
+
+@media screen and (max-width: 410px) {
+  .app {
+    width: 45.5vh;
   }
 }

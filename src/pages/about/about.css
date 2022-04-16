@@ -2,7 +2,7 @@
   /* border: 0.5px solid red; */
   /* width: 1300px; */
   width: 85%;
-  margin: 50px auto 30px auto;
+  margin: 130px auto 30px auto;
 }
 
 /* FIRST SECTION */
@@ -144,6 +144,7 @@
     /* width: 1300px; */
     width: 85%;
     margin: 50px auto 30px auto;
+    margin-top: 100px;
   }
 
   /* FIRST SECTION (adjustable in main file)*/
@@ -299,6 +300,7 @@
     /* width: 1300px; */
     width: 85%;
     margin: 50px auto 30px auto;
+    margin-top: 100px;
   }
 
   /* FIRST SECTION (adjustable in main file)*/
@@ -453,6 +455,7 @@
     /* border: 0.5px solid red; */
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
   }
 
   .about_first_section,
@@ -606,6 +609,7 @@
     /* border: 0.5px solid red; */
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
   }
 
   .about_first_section,
@@ -759,6 +763,7 @@
     /* border: 0.5px solid red; */
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
   }
 
   .about_first_section,

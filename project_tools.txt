@@ -18,3 +18,5 @@
 @media screen and (max-width: 490px) {
   
 }
+
+className={navbarLock ? "nav_links_scroll_styles" : ""}

@@ -1,4 +1,4 @@
-.loginX-container{
+.loginX-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,12 +6,12 @@
   height: 60%;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin: 30px auto 10px auto;
-  
+  margin: 120px auto 10px auto;
+
   /* border: .5px solid red; */
 }
 
-.loginX__title{
+.loginX__title {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 300;
@@ -19,7 +19,7 @@
   color: var(--first-color-dark);
 }
 
-.loginX__register{
+.loginX__register {
   padding: 0;
   width: 100%;
   max-width: 550px;
@@ -28,10 +28,10 @@
   height: 60%;
   margin: 15px 0px;
   background-color: white;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 2rem 2rem;
   /* border-radius: 1rem; */
-  
+
   text-align: center;
   box-shadow: 0 8px 20px rgba(87, 50, 133, 0.2);
   /* border: .5px solid red; */
@@ -42,7 +42,7 @@
   animation-name: animate-loginX; */
 }
 
-.loginX__register-content-container{
+.loginX__register-content-container {
   /* border: .5px solid red; */
   height: 100%;
   width: 100%;
@@ -50,20 +50,19 @@
   margin: 0px;
 }
 
-.loginX__box{
+.loginX__box {
   /* display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: .3rem; */
-  padding: .5rem .4rem;
-  background-color: #FFF;
+  padding: 0.5rem 0.4rem;
+  background-color: #fff;
   margin-top: 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   height: 100%;
   width: 100%;
   margin: 10px auto;
   display: flex;
   justify-content: center;
-  
 }
 
 /* .loginX__icon{
@@ -71,7 +70,7 @@
   color: var(--first-color);
 } */
 
-.loginX__input{
+.loginX__input {
   border: none;
   outline: none;
   font-size: 10px;
@@ -83,14 +82,14 @@
   /* border: .5px solid red; */
 }
 
-.loginX__input::placeholder{
+.loginX__input::placeholder {
   font-size: 12px;
   font-family: var(--body-font);
   color: var(--first-color-light);
   /* border: 2px solid red; */
 }
 
-.loginX__forgot{
+.loginX__forgot {
   display: block;
   width: max-content;
   margin-left: auto;
@@ -100,92 +99,40 @@
   color: var(--first-color-light);
 }
 
-
-.loginX__button{
+.loginX__button {
   display: block;
   padding: 1rem;
   margin: 2rem auto;
   /* background-color:  var(--first-color-dark); */
-  background-color:  var(--color-bg);
-  color: #FFF;
+  background-color: var(--color-bg);
+  color: #fff;
   font-weight: 400;
   text-align: center;
-  border-radius: .5rem;
-  transition: .3s;
+  border-radius: 0.5rem;
+  transition: 0.3s;
   width: 95%;
 }
 
-
-.loginX__button:hover{
+.loginX__button:hover {
   background-color: var(--color-hover);
 }
 
-
-.loginX__account, .loginX__signin{
+.loginX__account,
+.loginX__signin {
   font-weight: 400;
   font-size: var(--small-font-size);
 }
 
-
-.loginX__signin, .loginX__signup{
+.loginX__signin,
+.loginX__signup {
   color: var(--first-color);
   cursor: pointer;
 }
 
-.loginX__account{
+.loginX__account {
   margin-right: 7px;
 }
 
-.spanX-container{
+.spanX-container {
   text-align: center;
 }
-
-
-
-
-/* @media screen and (min-width: 576px){
-  .login__forms{
-    width: 348px;
-    justify-self: center;
-  }
-}
-
-@media screen and (min-width: 1024px){
-  .login{
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .login__content{
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    align-items: center;
-    margin-left: 10rem;
-  }
-
-  .login__img{
-    display: flex;
-    width: 600px;
-    height: 588px;
-    background-color: var(--first-color-lighten);
-    border-radius: 1rem;
-    padding-left: 1rem;
-  }
-
-  .login__img img{
-    width: 390px;
-    margin-top: 0;
-  }
-
-  .login__register, .login__create{
-    left: -11rem;
-  }
-
-  .login__register{
-    bottom: -2rem;
-  }
-
-  .login__create{
-    bottom: -5.5rem;
-  }
-} */

@@ -10,12 +10,10 @@ const Tabs = () => {
   };
 
   return (
-    <div className="tab-container section__padding">
+    <div className="tab-container">
       <div className="tab-wrap">
         <h2 className="modes-section-title">Connect with Duo</h2>
-        <h4 className="modes-section-subtitle">
-          (included in all cards)
-        </h4>
+        <h4 className="modes-section-subtitle">(included in all cards)</h4>
         <div className="bloc-tabs">
           <div
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}

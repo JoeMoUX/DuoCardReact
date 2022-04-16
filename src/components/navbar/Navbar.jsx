@@ -6,40 +6,87 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  let navigate = useNavigate();
+  const [navbarLock, setNavbarLock] = useState(false);
+
+  const changeNavBackground = () => {
+    if (window.scrollY >= 50) {
+      setNavbarLock(true);
+    } else {
+      setNavbarLock(false);
+    }
+
+    // console.log(window.scrollY);
+  };
+
+  window.addEventListener("scroll", changeNavBackground);
+
+  // let navigate = useNavigate();
 
   return (
-    <div className="duo_card__navbar">
+    <div
+      className={navbarLock ? "duo_card__navbar lock_nav" : "duo_card__navbar"}
+    >
       <div className="duo_card__navbar-links">
         <div className="duo_card__navbar-links_logo">
           <img src={duo_logo} alt="img" />
         </div>
         <div className="duo_card__navbar-links_container">
           <Link to="/">
-            <p>Home</p>
+            <p
+              className={
+                navbarLock ? "nav_links_scroll_styles" : "navbar_link_para"
+              }
+            >
+              Home
+            </p>
           </Link>
 
           <Link to="/dashboard">
-            <p>Dashboard</p>
+            <p
+              className={
+                navbarLock ? "nav_links_scroll_styles" : "navbar_link_para"
+              }
+            >
+              Dashboard
+            </p>
           </Link>
 
           <Link to="/about">
-            <p>About Us</p>
+            <p
+              className={
+                navbarLock ? "nav_links_scroll_styles" : "navbar_link_para"
+              }
+            >
+              About Us
+            </p>
           </Link>
 
           <Link to="/compatibility">
-            <p>Device Compatibility</p>
+            <p
+              className={
+                navbarLock ? "nav_links_scroll_styles" : "navbar_link_para"
+              }
+            >
+              Device Compatibility
+            </p>
           </Link>
-
-          <Link to="/blog">{/* <p>Our Blog</p> */}</Link>
         </div>
       </div>
       <div className="duo_card__navbar-sign">
         <Link to="/login">
-          <p>Sign in</p>
+          <p
+            className={
+              navbarLock ? "sign_in_links_scroll_styles" : "navbar_sign_para"
+            }
+          >
+            Sign in
+          </p>
         </Link>
 
         <button
+          className={
+            navbarLock ? "button_scroll_style_activated" : "button_scroll_style"
+          }
           type="button"
           onClick={() => {
             window.location.replace("/#cardOptions");
@@ -48,7 +95,6 @@ const Navbar = () => {
           BUY
         </button>
       </div>
-
       {/* toggle menu with icons */}
       <div className="duo_card__navbar-menu">
         {toggleMenu ? (
@@ -69,23 +115,23 @@ const Navbar = () => {
           <div className="duo_card__navbar-menu_container scale-up-center">
             <div className="duo_card__navbar-menu_container-links">
               <Link to="/">
-                <p>Home</p>
+                <p className="navbar_link_para">Home</p>
               </Link>
 
               <Link to="/login">
-                <p>Sign In</p>
+                <p className="navbar_link_para">Sign In</p>
               </Link>
 
               <Link to="/dashboard">
-                <p>Dashboard</p>
+                <p className="navbar_link_para">Dashboard</p>
               </Link>
 
               <Link to="/about">
-                <p>About Us</p>
+                <p className="navbar_link_para">About Us</p>
               </Link>
 
               <Link to="/compatibility">
-                <p>Device Compatibility</p>
+                <p className="navbar_link_para">Device Compatibility</p>
               </Link>
 
               {/* <p>

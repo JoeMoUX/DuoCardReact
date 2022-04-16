@@ -1,27 +1,20 @@
 .duo_card__header {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
   align-items: center;
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  /* border: 2px solid blue; */
+  /* border: 0.5px solid blue; */
 }
 
 .duo_card__header-content {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
   max-width: 60%;
   min-width: 95%;
-  margin: 0px auto;
-  
-  /* border: 2px solid purple; */
+  margin: 70px auto 0px auto;
+
+  /* border: 0.5px solid purple; */
   text-align: center;
   /* border: 2px solid blue; */
 }
@@ -71,96 +64,26 @@
 .header_card_image img {
   width: 700px;
 }
-/* .duo_card__header-content__input input {
-  flex: 2;
-  width: 100%;
-  min-height: 50px;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  background: var(--color-footer);
-  border: 2px solid var(--color-footer);
-  padding: 0 1rem;
-  outline: none;
-  color: #fff;
-
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-} */
-
-.duo_card__header-content__input button {
-  flex: 0.6;
-  width: 100%;
-  min-height: 50px;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  background: #ff4820;
-  border: 2px solid #ff4820;
-  padding: 0 1rem;
-  color: #fff;
-  cursor: pointer;
-  outline: none;
-
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.duo_card__header-content__people {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-
-  margin-top: 2rem;
-}
-
-/* .duo_card__header-content__people img {
-  width: 181.79px;
-  height: 38px;
-} */
-
-.duo_card__header-content__people p {
-  margin: 0 0 0 1rem;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 38px;
-  color: #fff;
-  text-align: center;
-}
-
-.duo_card__header-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 60vw;
-  min-width: 90%;
-  max-height: 60vh;
-  min-height: 90%;
-  margin-top: 1.5rem;
-}
-
-.duo_card__header-image img {
-  width: inherit;
-  height: inherit;
-}
 
 @media screen and (max-width: 1050px) {
+  .duo_card__header {
+    margin-top: 130px;
+  }
+
   .duo_card__header {
     flex-direction: column;
   }
 
   .duo_card__header-content {
-    margin: 0 0 3rem;
+    margin: 0 0 -2rem;
   }
 }
 
 @media screen and (max-width: 950px) {
+  .duo_card__header {
+    margin-top: 130px;
+  }
+
   .duo_card__header-content h1 {
     font-size: 48px;
     line-height: 60px;
@@ -171,11 +94,6 @@
     line-height: 24px;
   }
 
-  .duo_card__header-content__input input,
-  .duo_card__header-content__input button {
-    font-size: 16px;
-    line-height: 24px;
-  }
   .header_card_image {
     /* border: 0.5px solid blue; */
     margin: 40px auto 50px auto;
@@ -187,18 +105,15 @@
 }
 
 @media screen and (max-width: 650px) {
+  .duo_card__header {
+    margin-top: 130px;
+  }
   .duo_card__header-content h1 {
     font-size: 48px;
     line-height: 60px;
   }
 
   .duo_card__header-content p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .duo_card__header-content__input input,
-  .duo_card__header-content__input button {
     font-size: 16px;
     line-height: 24px;
   }
@@ -214,8 +129,7 @@
 
 @media screen and (max-width: 490px) {
   .duo_card__header {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 130px;
   }
 
   .duo_card__header-content h1 {
@@ -228,19 +142,14 @@
     line-height: 24px;
   }
 
-  .duo_card__header-content__input input,
-  .duo_card__header-content__input button {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
   .header_card_image {
     /* border: 0.5px solid blue; */
-    margin: 40px auto 50px auto;
+    margin: 40px auto 5px auto;
   }
 
   .header_card_image img {
     width: 300px;
     height: 250px;
+    /* border: 0.5px solid blue; */
   }
 }
