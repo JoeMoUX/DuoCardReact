@@ -72,69 +72,71 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="duo_card__navbar-sign">
-        <Link to="/login">
-          <p
+      <div className="sign_in_cover">
+        <div className="duo_card__navbar-sign">
+          <Link to="/login">
+            <p
+              className={
+                navbarLock ? "sign_in_links_scroll_styles" : "navbar_sign_para"
+              }
+            >
+              Sign in
+            </p>
+          </Link>
+
+          <button
             className={
-              navbarLock ? "sign_in_links_scroll_styles" : "navbar_sign_para"
+              navbarLock
+                ? "button_scroll_style_activated"
+                : "button_scroll_style"
             }
+            type="button"
+            onClick={() => {
+              window.location.replace("/#cardOptions");
+            }}
           >
-            Sign in
-          </p>
-        </Link>
+            BUY
+          </button>
+        </div>
+        <div className="duo_card__navbar-menu">
+          {toggleMenu ? (
+            <RiCloseLine
+              color="#204C8D"
+              size={27}
+              onClick={() => setToggleMenu(false)}
+            />
+          ) : (
+            <RiMenu3Line
+              color="#204C8D"
+              size={27}
+              onClick={() => setToggleMenu(true)}
+            />
+          )}
 
-        <button
-          className={
-            navbarLock ? "button_scroll_style_activated" : "button_scroll_style"
-          }
-          type="button"
-          onClick={() => {
-            window.location.replace("/#cardOptions");
-          }}
-        >
-          BUY
-        </button>
-      </div>
-      {/* toggle menu with icons */}
-      <div className="duo_card__navbar-menu">
-        {toggleMenu ? (
-          <RiCloseLine
-            color="#204C8D"
-            size={27}
-            onClick={() => setToggleMenu(false)}
-          />
-        ) : (
-          <RiMenu3Line
-            color="#204C8D"
-            size={27}
-            onClick={() => setToggleMenu(true)}
-          />
-        )}
+          {toggleMenu && (
+            <div className="duo_card__navbar-menu_container scale-up-center">
+              <div className="duo_card__navbar-menu_container-links">
+                <Link to="/">
+                  <p className="navbar_link_para">Home</p>
+                </Link>
 
-        {toggleMenu && (
-          <div className="duo_card__navbar-menu_container scale-up-center">
-            <div className="duo_card__navbar-menu_container-links">
-              <Link to="/">
-                <p className="navbar_link_para">Home</p>
-              </Link>
+                <Link to="/login">
+                  <p className="navbar_link_para">Sign In</p>
+                </Link>
 
-              <Link to="/login">
-                <p className="navbar_link_para">Sign In</p>
-              </Link>
+                <Link to="/dashboard">
+                  <p className="navbar_link_para">Dashboard</p>
+                </Link>
 
-              <Link to="/dashboard">
-                <p className="navbar_link_para">Dashboard</p>
-              </Link>
+                <Link to="/about">
+                  <p className="navbar_link_para">About Us</p>
+                </Link>
 
-              <Link to="/about">
-                <p className="navbar_link_para">About Us</p>
-              </Link>
+                <Link to="/compatibility">
+                  <p className="navbar_link_para">Device Compatibility</p>
+                </Link>
 
-              <Link to="/compatibility">
-                <p className="navbar_link_para">Device Compatibility</p>
-              </Link>
-
-              {/* <p>
+                {/* <p>
                 <a
                   onClick={() => {
                     window.location.replace("/#features");
@@ -143,10 +145,13 @@ const Navbar = () => {
                   Features
                 </a>
               </p> */}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
+
+      {/* toggle menu with icons */}
     </div>
   );
 };
