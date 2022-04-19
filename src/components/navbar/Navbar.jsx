@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import duo_logo from "../../assets/duo_logo.svg";
+import duo_logo from "../../assets/duo_logo-PhotoRoom.svg";
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
